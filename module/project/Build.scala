@@ -3,7 +3,7 @@ import Keys._
 
 object ApplicationBuild extends Build {
 
-  val appName = "pdf"
+  val appName = "pdf-scala"
   val appVersion = "0.6"
 
   // Dependencies
