@@ -93,7 +93,7 @@ case class MyUserAgent(outputDevice: ITextOutputDevice) extends ITextUserAgent(o
           val bytes = Resource.fromInputStream(stream).byteArray
           val image = Image.getInstance(bytes)
           scaleToOutputResolution(image)
-          new ImageResource(new ITextFSImage(image))
+          new ImageResource(uri, new ITextFSImage(image))
         } catch {
           case e: Exception => {
             Logger.error(s"Fetching image $uri", e)
